@@ -13,7 +13,7 @@ private:
     // but more methods would be needed.
 
 public:
-    Comuna(double width=1000, double length=1000);
+    Comuna(double width, double length);
     double getWidth() const;
     double getHeight() const;
     void setPerson(Pedestrian &person);
@@ -21,7 +21,7 @@ public:
     void updateState ();
     static string getStateDescription();
     string getState() const;
- };
+};
 
 #endif // COMUNA_H
 
