@@ -19,6 +19,25 @@ void Pedestrian::computeNextState(double delta_t) {
     angle+=deltaAngle*(1-2*r);
     x_tPlusDelta=x+speed*qCos(angle)*delta_t;
     y_tPlusDelta=y+speed*qSin(angle)*delta_t;
+
+    if (x_tPlusDelta < 0){   // rebound logic
+        x_tPlusDelta =- x_tPlusDelta;
+        angle = M_PI-angle;
+    }
+    if (y_tPlusDelta < 0){
+        y_tPlusDelta =- y_tPlusDelta;
+        angle = 2 * M_PI - angle;
+    }
+    if (x_tPlusDelta > comuna.getWidth()){
+        x_tPlusDelta = 2 * comuna.getWidth() - x_tPlusDelta;
+        angle = M_PI - angle;
+    }
+    if (y_tPlusDelta > comuna.getHeight()){
+        y_tPlusDelta = 2 * comuna.getHeight() - y_tPlusDelta;
+        angle = 2 * M_PI - angle;
+    }
+
+
 //...
 }
 void Pedestrian::updateState(){

@@ -11,7 +11,8 @@ SOURCES += \
     Comuna.cpp \
     Pedestrian.cpp \
     Simulator.cpp \
-    Stage1.cpp
+    Stage1.cpp \
+    mainwindow.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -21,7 +22,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     Comuna.h \
     Pedestrian.h \
-    Simulator.h
+    Simulator.h \
+    mainwindow.h
 
 DISTFILES += \
     config.txt
+
+FORMS += \
+    mainwindow.ui

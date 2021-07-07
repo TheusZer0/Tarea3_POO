@@ -1,11 +1,15 @@
 #include "Comuna.h"
 
 Comuna::Comuna(double width, double length): territory(0,0,width,length){
+    //constructor
     pPerson=NULL;
+    //variables que faltan
+    width = 1000;
 }
 
 double Comuna::getWidth() const {
-    return 0;
+    double width = territory.width();
+    return width;
 }
 
 double Comuna::getHeight() const {
