@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 
     //
     cout << "comuna Width:" << comuna.getWidth()<< "\n" ;
-    cout << "comuna Height :" << comuna.getHeight()<< "\n" ;
+    cout << "comuna Height:" << comuna.getHeight()<< "\n" ;
 
     Pedestrian person(comuna, 1.4, 0.4);
     comuna.setPerson(person);

@@ -23,7 +23,7 @@ void Simulator::startSimulation(){
     t=0;
     printState(t);
     timer->start(/**/);
-    for (int i = 0; i < t ; ++i) {
+    for (QTimer *i = 0; i < timer ; ++i) {
         simulateSlot();
     }
 
