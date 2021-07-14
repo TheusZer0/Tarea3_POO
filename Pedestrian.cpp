@@ -12,7 +12,7 @@ Pedestrian::Pedestrian(Comuna &com, double speed, double deltaAngle) : comuna(co
     this->deltaAngle=deltaAngle;
     this->speed = speed*(0.9+0.2*myRand.generateDouble());
     this-> x = myRand.generateDouble() * comuna.getWidth();
-    this-> y = myRand.generateDouble() * comuna.getWidth();
+    this-> y = myRand.generateDouble() * comuna.getHeight();
     this->angle = myRand.generateDouble() * 2 * M_PI;
 
     //opcional, no estoy seguro, solo es para inicializar las variables

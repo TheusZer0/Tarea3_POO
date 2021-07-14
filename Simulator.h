@@ -12,9 +12,9 @@ private:
     Comuna &comuna;
     ostream &out;
     double t;
-    double delta_t, samplingTime;
+    double delta_t, samplingTime, endTime;
 public:
-    Simulator (ostream &output, Comuna &comuna, double delta_t, double samplingTime);
+    Simulator (ostream &output, Comuna &comuna, double delta_t, double samplingTime,double endTime);
     void printStateDescription() const;
     void printState(double t) const;
     void startSimulation();

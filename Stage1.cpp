@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
         exit(-1);
     }
 
-    double N, I, I_time, comunaWidth,comunaLength,speed, delta_t,deltaAngle;
+    double N, I, I_time, comunaWidth,comunaLength,speed, delta_t,deltaAngle,endTime;
 
     //Falta Lectura del archivo
     ifstream fin(argv[1]);
@@ -33,7 +33,8 @@ int main(int argc, char *argv[])
     */
 
     double samplingTime = 1.0;
-    Comuna comuna(1000, 100);
+    endTime = 360;
+    Comuna comuna(100, 100);
 
     //
     cout << "comuna Width:" << comuna.getWidth()<< "\n" ;
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
 
     Pedestrian person(comuna, 1.4, 0.4);
     comuna.setPerson(person);
-    Simulator sim(cout, comuna, 0.2, samplingTime);
+    Simulator sim(cout, comuna, 0.2,samplingTime,endTime);
     sim.startSimulation();
 
     //return a.exec();

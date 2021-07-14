@@ -1,12 +1,13 @@
 #include <iostream>
 #include "Simulator.h"
 
-Simulator::Simulator(ostream &output, Comuna &com, double delta, double st) : comuna(com), out(output) {
+Simulator::Simulator(ostream &output, Comuna &com, double delta, double st ,double endT) : comuna(com), out(output) {
     t=0;
     delta_t=delta;
     samplingTime=st;
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()),this, SLOT(simulateSlot()));
+    endTime=endT;
 }
 
 void Simulator::printStateDescription() const {
@@ -22,19 +23,16 @@ void Simulator::startSimulation(){
     printStateDescription();
     t=0;
     printState(t);
-    timer->start(/**/);
-    for (QTimer *i = 0; i < timer ; ++i) {
-        simulateSlot();
-    }
-
+    timer->start(1000);
+    simulateSlot();
     //esta linea hay que cambiar, necesito hacer k se alargue los X segundos
 }
 void Simulator::simulateSlot(){
-    double nextStop=t+samplingTime;
-    while(t<nextStop) {
-       comuna.computeNextState(delta_t); // compute its next state based on current global state
-       comuna.updateState();  // update its state
-       t+=delta_t;
+    while(t<endTime) {
+        for (double nextStop=t+samplingTime; t < nextStop; t+= delta_t) {
+            comuna.computeNextState(delta_t); // compute its next state based on current global state
+            comuna.updateState();  // update its state
+        }
+        printState(t);
     }
-    printState(t);
 }
