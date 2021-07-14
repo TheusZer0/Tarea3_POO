@@ -20,6 +20,8 @@ add_executable(Stage1
         Simulator.cpp
         Simulator.h
         Stage1.cpp
+        mainwindow.cpp
+        mainwindow.h
         )
 
 if (NOT CMAKE_PREFIX_PATH)

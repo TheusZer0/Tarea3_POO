@@ -1,13 +1,17 @@
 #include "Comuna.h"
 #include "Simulator.h"
 #include "Pedestrian.h"
+#include "mainwindow.h"
 #include <QCoreApplication>
 #include <iostream>
 #include <fstream>
+#include <QApplication>
+#include <QPushButton>
+
 using namespace std;
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
+    QApplication a(argc, argv);
 
     if (argc != 2){
         cout << "Usage: stage1 <configurationFile.txt>" << endl;
@@ -45,5 +49,8 @@ int main(int argc, char *argv[])
     Simulator sim(cout, comuna, delta_t,samplingTime,endTime);
     sim.startSimulation();
 
-    //return a.exec();
+    MainWindow w;
+    w.show();
+
+    return QApplication::exec(); //se hizo un cambio, antes iba aqui a.exec() ojo con esto
 }
