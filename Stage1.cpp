@@ -14,23 +14,23 @@ int main(int argc, char *argv[])
         exit(-1);
     }
 
-    double N, I, I_time, comunaWidth,comunaLength,speed, delta_t,deltaAngle,endTime;
+    double N, I, I_time, comunaWidth,comunaLength,speed, deltaAngle,endTime,delta_t;
 
-    //Falta Lectura del archivo
     ifstream fin(argv[1]);
 
     cout << "File: " << argv[1] << endl;
 
-    /* Lectura del archivo, errores con el flujo al parecer, da exponenciales de -28 XD
+    /*
+     * Se arreglo el tema del archivo, debes darle el path absoluto para que funcione
+     * */
     fin >> N >> I >> I_time;
-    cout << N << "," << I << "," << I_time << endl;
     fin >> comunaWidth >> comunaLength;
     fin >> speed >> delta_t >> deltaAngle;
 
     cout << N << "," << I << "," << I_time << endl;
     cout << comunaWidth <<"," << comunaLength << endl;
     cout << speed <<","<< delta_t <<"," << deltaAngle<< endl;
-    */
+
 
     double samplingTime = 1.0;
     endTime = 360;
@@ -40,9 +40,9 @@ int main(int argc, char *argv[])
     cout << "comuna Width:" << comuna.getWidth()<< "\n" ;
     cout << "comuna Height:" << comuna.getHeight()<< "\n" ;
 
-    Pedestrian person(comuna, 1.4, 0.4);
+    Pedestrian person(comuna, speed, deltaAngle);
     comuna.setPerson(person);
-    Simulator sim(cout, comuna, 0.2,samplingTime,endTime);
+    Simulator sim(cout, comuna, delta_t,samplingTime,endTime);
     sim.startSimulation();
 
     //return a.exec();
