@@ -11,6 +11,7 @@
 using namespace std;
 int main(int argc, char *argv[])
 {
+    //lo cambie aca
     QApplication a(argc, argv);
 
     if (argc != 2){
