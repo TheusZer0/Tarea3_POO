@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
     cout << "File: " << argv[1] << endl;
 
     /*
+     *
      * Se arreglo el tema del archivo, debes darle el path absoluto para que funcione
      * */
     fin >> N >> I >> I_time;
