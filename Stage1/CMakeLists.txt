@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.19)
-project(Stage1)
+project(.)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_AUTOMOC ON)
@@ -10,9 +10,9 @@ set(QT_VERSION 5)
 set(REQUIRED_LIBS Core Gui Widgets)
 set(REQUIRED_LIBS_QUALIFIED Qt5::Core Qt5::Gui Qt5::Widgets)
 
-include_directories(.)
+include_directories(..)
 
-add_executable(Stage1
+add_executable(.
         Comuna.cpp
         Comuna.h
         Pedestrian.cpp

@@ -46,7 +46,7 @@ QChart * Simulator::simulateSlot(QLineSeries *series){
     //chart->legend()->hide();
     chart->addSeries(series);
     chart->createDefaultAxes();
-    chart->setTitle("Line Chart Example");
+    chart->setTitle("Movimiento del individuo");
     chart->legend()->setVisible(true);
     chart->legend()->setAlignment(Qt::AlignBottom);
     return chart;
