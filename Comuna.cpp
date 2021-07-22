@@ -38,3 +38,14 @@ string Comuna::getState() const{
     string a = pPerson->getState();
     return a;
 }
+
+double Comuna::getX(){
+    double a = pPerson->getX();
+    return a;
+}
+
+double Comuna::getY(){
+    double a = pPerson->getY();
+    return a;
+}
+

@@ -21,6 +21,8 @@ public:
     void updateState ();
     static string getStateDescription();
     string getState() const;
+    double getX();
+    double getY();
 };
 
 #endif // COMUNA_H

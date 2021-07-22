@@ -26,6 +26,22 @@ string Pedestrian::getState() const {
     return s;
 }
 
+void Pedestrian::setX(double x) {
+    Pedestrian::x = x;
+}
+
+double Pedestrian::getX() const {
+    return x;
+}
+
+double Pedestrian::getY() const {
+    return y;
+}
+
+void Pedestrian::setY(double y) {
+    Pedestrian::y = y;
+}
+
 void Pedestrian::computeNextState(double delta_t) {
     double r=myRand.generateDouble();
     angle+=deltaAngle*(1-2*r);

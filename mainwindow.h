@@ -2,8 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QApplication>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMainWindow>
+#include <QtCharts/QChartView>
+#include <QtCharts/QSplineSeries>
 
+using namespace QtCharts;
 
 namespace Ui {
 class MainWindow;
@@ -14,7 +18,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QChart* chart,QWidget *parent = nullptr);
     ~MainWindow();
 
 private:

@@ -49,10 +49,13 @@ int main(int argc, char *argv[])
     Pedestrian person(comuna, speed, deltaAngle);
     comuna.setPerson(person);
     Simulator sim(cout, comuna, delta_t,samplingTime,endTime);
-    sim.startSimulation();
+    QChart *chart = sim.startSimulation();
 
-    MainWindow w;
+    MainWindow w(chart);
+    w.resize(900, 600);
     w.show();
+
+    return a.exec();
 
     return QApplication::exec(); //se hizo un cambio, antes iba aqui a.exec() ojo con esto
 }

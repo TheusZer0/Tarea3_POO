@@ -1,4 +1,4 @@
-QT -= core gui
+QT += charts core gui
 
 CONFIG += c++11 console
 CONFIG -= app_bundle

@@ -20,6 +20,14 @@ public:
     string getState() const;
     void computeNextState(double delta_t);
     void updateState();
+
+    double getX() const;
+
+    void setX(double x);
+
+    double getY() const;
+
+    void setY(double y);
 };
 
 #endif // PEDESTRIAN_H
