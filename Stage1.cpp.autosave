@@ -11,7 +11,8 @@
 using namespace std;
 int main(int argc, char *argv[])
 {
-    //lo cambie aca
+    //esto se cambio debido a que QAplicattion funciona de manera excelente con la version QT actual utilizada
+    //mientras que la entregada
     QApplication a(argc, argv);
 
     if (argc != 2){
