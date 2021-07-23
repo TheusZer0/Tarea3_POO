@@ -28,7 +28,7 @@ HEADERS += \
     mainwindow.h
 
 DISTFILES += \
-    "/home/theuszero/QtProyects/Stage1/config.txt"
+    "/home/theuszero/QtProyects/Stage1/Stage1/config.txt"
 
 FORMS += \
     mainwindow.ui

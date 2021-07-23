@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.1, 2021-07-14T00:12:34. -->
+<!-- Written by QtCreator 4.13.1, 2021-07-22T08:10:28. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -323,9 +323,10 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/theuszero/QtProyects/Stage1/Stage1.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/theuszero/QtProyects/Stage1/Stage1.pro</value>
-    <value type="QString" key="RunConfiguration.Arguments">/home/theuszero/QtProyects/Stage1/config.txt</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Stage12</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/theuszero/QtProyects/Stage1/Stage1/Stage1.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/theuszero/QtProyects/Stage1/Stage1/Stage1.pro</value>
+    <value type="QString" key="RunConfiguration.Arguments">&quot;/home/theuszero/QtProyects/Stage1/Stage1/config.txt&quot;</value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
